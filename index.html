@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Profesional Willy Alfalfa S - Lulusan Multimedia & Praktisi Desain Grafis/Pengolahan Data. Desain bersih, modern, dan responsif.">
+    <meta name="author" content="Willy Alfalfa S">
+    <meta name="robots" content="index, follow">
+    <title>Willy Alfalfa S | Portfolio Profesional</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p class="loader-text">Memuat Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-bar"></div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- MOBILE OVERLAY BACKDROP -->
+    <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="container navbar-container">
+            <a href="#home" class="logo" id="logo-link">
+                <span class="logo-dot"></span>
+                <span class="logo-text">Willy Alfalfa S</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Navigasi Utama">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+                    <li><a href="#education" class="nav-link">Pendidikan</a></li>
+                    <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+                    <li><a href="#projects" class="nav-link">Project</a></li>
+                    <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                    <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions (Dark Mode Toggle & Hamburger Menu) -->
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Ganti mode tampilan (Gelap/Terang)" title="Ganti Tema">
+                    <!-- Sun Icon (shown in dark mode) -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (shown in light mode) -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HOME / HERO SECTION -->
+        <section id="home" class="section hero-section">
+            <div class="ambient-glow hero-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content fade-in-element">
+
+                    <h1 class="hero-title">Halo, Saya <span class="text-gradient">Willy Alfalfa S</span></h1>
+                    <p class="hero-subtitle">Mahasiswa S1 Sistem Teknologi Informasi & Lulusan Multimedia</p>
+                    <p class="hero-description">
+                        Mahasiswa S1 Sistem Teknologi Informasi di Universitas Cakrawala dan lulusan Multimedia dari SMK Bina Nusa Mandiri. Memiliki pengalaman kerja operasional dan PKL di perpustakaan universitas. Siap berkontribusi dalam pengembangan aplikasi web, pengolahan data, dan desain komunikasi visual.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Lihat Portfolio</span>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#download" class="btn btn-secondary">
+                            <span>Download CV</span>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/Welly-23" target="_blank" class="btn btn-outline">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+<div class="hero-image-wrapper fade-in-element">
+    <div class="profile-image-container">
+        <img src="assets/images/foto Diri.png"
+             alt="Foto Profil Willy Alfalfa"
+             class="profile-img"
+             loading="lazy">
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- TENTANG SAYA SECTION -->
+        <section id="about" class="section about-section bg-secondary-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <p class="section-subtitle">Kenali lebih dekat latar belakang profesional saya</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text fade-in-element">
+                        <p class="paragraph-highlight">
+                            Saya adalah pribadi yang mudah beradaptasi, bertanggung jawab, dan memiliki semangat belajar yang tinggi.
+                        </p>
+                        <p class="paragraph-desc">
+                            Halo! Saya Willy Alfalfa, seorang mahasiswa Sistem Teknologi Informasi yang memiliki ketertarikan pada dunia teknologi, khususnya pengembangan website dan solusi digital. Saya dikenal sebagai pribadi yang mudah beradaptasi, bertanggung jawab, serta memiliki semangat belajar yang tinggi.
+                        </p>
+                        <p class="paragraph-desc">
+                            Selama proses belajar, saya terbiasa menyelesaikan berbagai tugas secara mandiri maupun bersama tim. Saya percaya bahwa setiap pengalaman merupakan kesempatan untuk terus berkembang, baik dari sisi kemampuan teknis maupun soft skills.
+                        </p>
+                    </div>
+                    <div class="about-stats fade-in-element">
+                        <!-- Stat Card 1 -->
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper blue">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-badge">Pendidikan Saat Ini</span>
+                                <h3 class="stat-number">S1 Aktif</h3>
+                                <p class="stat-label">Sistem Teknologi Informasi &bull; Universitas Cakrawala</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 2 -->
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper purple">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-badge">Pengalaman Kerja & PKL</span>
+                                <h3 class="stat-number">2 Pengalaman</h3>
+                                <p class="stat-label">Operasional Toko Plastik & PKL Perpustakaan JGU</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 3 -->
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper green">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-badge">Kualifikasi Resmi</span>
+                                <h3 class="stat-number">2 Sertifikasi</h3>
+                                <p class="stat-label">Kompetensi DKV & Sertifikat Resmi PKL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PENDIDIKAN SECTION -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Pendidikan</h2>
+                    <p class="section-subtitle">Riwayat akademis dan fokus kompetensi yang saya tempuh</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Education Item 1 -->
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-dot">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">2024 – Sekarang</span>
+                            <h3 class="timeline-title">S1 Sistem Teknologi Informasi</h3>
+                            <h4 class="timeline-institution">Universitas Cakrawala</h4>
+                            <p class="timeline-desc">
+                                Saat ini saya sedang mempelajari berbagai bidang teknologi informasi, mulai dari pengembangan website, basis data, analisis sistem, hingga pengembangan aplikasi sebagai bekal untuk memasuki dunia kerja.
+                            </p>
+                            <div class="timeline-competencies">
+                                <span class="badge-tag">Pengembangan Website</span>
+                                <span class="badge-tag">Basis Data</span>
+                                <span class="badge-tag">Analisis Sistem</span>
+                                <span class="badge-tag">Pengembangan Aplikasi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-dot">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-period">2021 – 2024</span>
+                            <h3 class="timeline-title">Multimedia</h3>
+                            <h4 class="timeline-institution">SMK Bina Nusa Mandiri</h4>
+                            <p class="timeline-desc">
+                                Mempelajari konsep komunikasi visual, desain grafis dasar, pengolahan gambar digital, penyuntingan video, serta pengelolaan aset multimedia.
+                            </p>
+                            <div class="timeline-competencies">
+                                <span class="badge-tag">Desain Grafis</span>
+                                <span class="badge-tag">Adobe Illustrator</span>
+                                <span class="badge-tag">Komunikasi Visual</span>
+                                <span class="badge-tag">Pengolahan Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PENGALAMAN SECTION -->
+        <section id="experience" class="section experience-section bg-secondary-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Pengalaman Kerja & PKL</h2>
+                    <p class="section-subtitle">Pengalaman operasional, pelayanan, dan administratif yang telah saya jalani</p>
+                </div>
+                
+                <div class="experience-grid">
+                    <!-- Experience Card 1 -->
+                    <div class="card experience-card fade-in-element">
+                        <div class="card-header">
+                            <div class="experience-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </div>
+                            <div class="experience-meta">
+                                <h3 class="experience-role">Staff Pendataan Perpustakaan</h3>
+                                <span class="experience-company">Jakarta Global University (PKL)</span>
+                                <span class="experience-period">Masa PKL</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="experience-summary">
+                                Selama menjalani Praktik Kerja Lapangan di Jakarta Global University, saya membantu proses administrasi perpustakaan dengan melakukan pendataan dan penginputan buku ke dalam sistem secara rapi dan terstruktur. Saya juga bekerja sama dengan tim untuk memastikan data tercatat dengan akurat serta turut mendukung pelaksanaan kegiatan kampus.
+                            </p>
+                            <ul class="experience-bullets">
+                                <li>Melakukan penginputan dan pembaruan data buku ke dalam sistem.</li>
+                                <li>Memastikan data yang diinput akurat bersama tim.</li>
+                                <li>Membantu pengelolaan administrasi perpustakaan.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 2 -->
+                    <div class="card experience-card fade-in-element">
+                        <div class="card-header">
+                            <div class="experience-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            </div>
+                            <div class="experience-meta">
+                                <h3 class="experience-role">Staff Operasional Toko Plastik</h3>
+                                <span class="experience-company">Toko Plastik</span>
+                                <span class="experience-period">Masa Kerja</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="experience-summary">
+                                Bertanggung jawab membantu operasional toko, melayani pelanggan, mencatat transaksi dan pengeluaran, serta memantau ketersediaan stok barang. Pengalaman ini mengasah kemampuan komunikasi, ketelitian, dan manajemen stok.
+                            </p>
+                            <ul class="experience-bullets">
+                                <li>Melayani pelanggan dan membantu memilih produk yang sesuai dengan kebutuhan.</li>
+                                <li>Mencatat transaksi dan pengeluaran operasional toko secara rapi.</li>
+                                <li>Memantau ketersediaan stok serta menyusun daftar barang yang perlu dipesan kembali.</li>
+                                <li>Mengenali berbagai jenis, ukuran, dan spesifikasi produk plastik untuk mendukung pelayanan yang lebih cepat dan tepat.</li>
+                                <li>Membantu menjaga kerapihan area kerja dan kelancaran operasional toko.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT & PORTFOLIO SECTION -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Project & Portfolio</h2>
+                    <p class="section-subtitle">Kumpulan aplikasi web dan proyek pengembangan yang telah saya kerjakan</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: PawMatch -->
+                    <article class="card project-card fade-in-element">
+                        <div class="project-thumbnail browser-frame">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address">pawmatch.app</div>
+                            </div>
+                            <div class="thumbnail-image-wrapper">
+                                <img src="assets/images/pawmatch.png"
+                                     alt="PawMatch - Pet Adoption Platform"
+                                     class="project-image project-image-scroll"
+                                     loading="lazy">
+                                <div class="thumbnail-overlay">
+                                    <button class="btn-preview-modal" data-img="assets/images/pawmatch.png" data-title="PawMatch – Pet Adoption & Matching Platform">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                        Lihat Full Page
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header-meta">
+                                <span class="project-badge">Featured App</span>
+                                <h3 class="project-name">PawMatch – Pet Adoption & Matching Platform</h3>
+                            </div>
+                            <p class="project-desc">
+                               PawMatch adalah aplikasi yang membantu pengguna menemukan hewan peliharaan yang sesuai dengan preferensi dan gaya hidup mereka. Pengguna bisa memilih jenis hewan, ras, umur, ukuran, jenis kelamin, hingga karakter yang diinginkan. 
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">UI/UX Concept</span>
+                                <span class="tech-tag">Matchmaking</span>
+                            </div>
+                            <div class="project-links"> 
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Green Lake View -->
+                    <article class="card project-card fade-in-element">
+                        <div class="project-thumbnail browser-frame">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address">greenlakeview.com</div>
+                            </div>
+                            <div class="thumbnail-image-wrapper">
+                                <img src="assets/images/Green Lake Depok.png"
+                                     alt="Green Lake View Website"
+                                     class="project-image project-image-scroll"
+                                     loading="lazy">
+                                <div class="thumbnail-overlay">
+                                    <button class="btn-preview-modal" data-img="assets/images/Green Lake Depok.png" data-title="Green Lake View Website">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                        Lihat Full Page
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Green Lake View Website</h3>
+                            <p class="project-desc">
+                                Website company profile untuk proyek properti yang dirancang dengan tampilan modern dan responsif. Website ini menyajikan informasi apartemen, cluster hunian, fasilitas, galeri, serta formulir reservasi online agar calon pelanggan lebih mudah memperoleh informasi.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Mahata -->
+                    <article class="card project-card fade-in-element">
+                        <div class="project-thumbnail browser-frame">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address">mahata-tanjungbarat.com</div>
+                            </div>
+                            <div class="thumbnail-image-wrapper">
+                                <img src="assets/images/mahata.png"
+                                     alt="Website Mahata Tanjung Barat"
+                                     class="project-image project-image-scroll"
+                                     loading="lazy">
+                                <div class="thumbnail-overlay">
+                                    <button class="btn-preview-modal" data-img="assets/images/mahata.png" data-title="Apartement Mahata Tanjung Barat">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                        Lihat Full Page
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Apartement Mahata Tanjung Barat</h3>
+                            <p class="project-desc">
+                                Website pemasaran apartemen yang menampilkan informasi unit, fasilitas, virtual tour, galeri, dan sistem booking. Fokus utama pengembangan website ini adalah menghadirkan tampilan yang profesional, responsif, dan mudah digunakan.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEAHLIAN SECTION -->
+        <section id="skills" class="section skills-section bg-secondary-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Keahlian Saya</h2>
+                    <p class="section-subtitle">Kompetensi teknis dan non-teknis berdasarkan kualifikasi saya</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Technical Skills Card -->
+                    <div class="card skill-card fade-in-element">
+                        <div class="skill-icon-header">
+                            <div class="skill-icon blue">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <h3 class="skill-group-title">Technical Skills</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Desain Grafis Dasar</li>
+                            <li>Pengolahan dan Input Data</li>
+                            <li>Editing Gambar Digital</li>
+                            <li>Tata Letak Aset Visual</li>
+                        </ul>
+                    </div>
+
+                    <!-- Software & Tools Card -->
+                    <div class="card skill-card fade-in-element">
+                        <div class="skill-icon-header">
+                            <div class="skill-icon purple">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            </div>
+                            <h3 class="skill-group-title">Software & Tools</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Adobe Illustrator</li>
+                            <li>Microsoft Word</li>
+                            <li>Microsoft Office</li>
+                            <li>Sistem Input Data Digital</li>
+                        </ul>
+                    </div>
+
+                    <!-- Microsoft Office Card -->
+                    <div class="card skill-card fade-in-element">
+                        <div class="skill-icon-header">
+                            <div class="skill-icon green">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            </div>
+                            <h3 class="skill-group-title">Microsoft Office</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Microsoft Word</li>
+                            <li>Microsoft Office (Excel & PowerPoint)</li>
+                            <li>Pengolahan Data Administratif</li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills Card -->
+                    <div class="card skill-card fade-in-element">
+                        <div class="skill-icon-header">
+                            <div class="skill-icon orange">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3 class="skill-group-title">Soft Skills</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Komunikasi yang baik</li>
+                            <li>Kerja sama tim</li>
+                            <li>Manajemen waktu</li>
+                            <li>Teliti dan rapi dalam bekerja</li>
+                            <li>Cepat beradaptasi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERTIFIKAT SECTION -->
+        <section id="certificates" class="section certificates-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Sertifikat Resmi</h2>
+                    <p class="section-subtitle">Sertifikasi kompetensi dan pelatihan dari riwayat karir saya</p>
+                </div>
+
+                <div class="certificates-grid">
+                    <!-- Certificate 1 -->
+                    <div class="card certificate-card fade-in-element">
+                        <div class="certificate-badge">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Sertifikat Praktik Kerja Lapangan (PKL)</h3>
+                            <p class="certificate-issuer">Jakarta Global University</p>
+                            <p class="certificate-date">Status: Tersedia</p>
+                            <a href="assets/images/Sertifikat JGU.png" target="_blank" class="btn btn-secondary-sm">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="card certificate-card fade-in-element">
+                        <div class="certificate-badge">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Sertifikat Kompetensi Desain Komunikasi Visual</h3>
+                            <p class="certificate-issuer">Uji Kompetensi Keahlian</p>
+                            <p class="certificate-date">Status: Tersedia</p>
+                            <a href="assets/images/Sertifikat Kompetisi.png" target="_blank" class="btn btn-secondary-sm">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD CV SECTION -->
+        <section id="download" class="section download-section bg-secondary-section">
+            <div class="container download-container fade-in-element">
+                <div class="download-content">
+                    <h2 class="download-title">Tertarik Bekerja Sama dengan Saya?</h2>
+                    <p class="download-subtitle">Unduh CV lengkap untuk melihat kualifikasi profesional saya</p>
+                    <p class="download-desc">
+                        Dokumen ini memuat detail riwayat pendidikan Multimedia, perkuliahan Sistem Teknologi Informasi, pengalaman kerja & PKL, kompetensi software, dan soft skills saya secara menyeluruh.
+                    </p>
+                    <!-- Link points to the placeholder file in assets/resume/ -->
+                    <a href="assets/resume/CV_Willy_Alfalfa_S.pdf" download class="btn btn-primary btn-icon" id="download-btn-section">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Unduh CV Willy Alfalfa (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2 class="section-title">Kontak Saya</h2>
+                    <p class="section-subtitle">Hubungi saya untuk diskusi kerjasama, magang, atau informasi lebih lanjut</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Details Card -->
+                    <div class="contact-info-wrapper fade-in-element">
+                        <h3 class="contact-info-title">Hubungi Saya Secara Langsung</h3>
+                        <p class="contact-info-desc">Saya selalu terbuka untuk membahas peluang kerja, proyek, atau sekadar berjejaring secara profesional.</p>
+                        
+                        <div class="contact-methods">
+                            <!-- WhatsApp -->
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon whatsapp">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                </div>
+                                <div class="contact-method-details">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <span class="contact-value">(+62) 858-9990-2707</span>
+                                </div>
+                                <div class="contact-actions">
+                                    <a href="https://wa.me/6285899902707" target="_blank" rel="noopener noreferrer" class="btn-action-icon" title="Buka WhatsApp">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    </a>
+                                    <button type="button" class="btn-action-icon copy-btn" data-copy="+6285899902707" data-label="Nomor WhatsApp" title="Salin Nomor WA">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon email">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div class="contact-method-details">
+                                    <span class="contact-label">Email Resmi</span>
+                                    <span class="contact-value">Willyalfalfa0203@gmail.com</span>
+                                </div>
+                                <div class="contact-actions">
+                                    <a href="mailto:Willyalfalfa0203@gmail.com" class="btn-action-icon" title="Kirim Email">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                    </a>
+                                    <button type="button" class="btn-action-icon copy-btn" data-copy="Willyalfalfa0203@gmail.com" data-label="Alamat Email" title="Salin Email">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Lokasi -->
+                            <div class="contact-method-card no-hover">
+                                <div class="contact-method-icon location">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="contact-method-details">
+                                    <span class="contact-label">Domisili</span>
+                                    <span class="contact-value">Jakarta Timur, DKI Jakarta</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="card contact-form-card fade-in-element">
+                        <h3 class="form-title">Kirim Pesan Cepat</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Alamat Email</label>
+                                <input type="email" id="form-email" name="email" placeholder="Masukkan email Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span>Kirim Pesan</span>
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="#home" class="logo">
+                    <span class="logo-dot"></span>
+                    <span class="logo-text">Willy ALFALFA</span>
+                </a>
+                <p class="footer-tagline">Membangun representasi karir yang bersih, profesional, dan nyaman dibaca oleh recruiter.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#education">Pendidikan</a></li>
+                        <li><a href="#experience">Pengalaman</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Kategori</h4>
+                    <ul>
+                        <li><a href="#projects">Project</a></li>
+                        <li><a href="#skills">Keahlian</a></li>
+                        <li><a href="#certificates">Sertifikat</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Sosial</h4>
+                    <ul>
+                        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="placeholder-action" data-msg="Link GitHub Willy Alfalfa S dapat disematkan di sini.">GitHub</a></li>
+                        <li><a href="#home">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright">&copy; 2026 Willy Alfalfa S. Hak Cipta Dilindungi.</p>
+                <p class="designed-by">Didesain secara profesional &bull; HTML, CSS, JS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX IMAGE PREVIEW MODAL -->
+    <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-badge">Full Preview</span>
+                    <h3 id="modal-title" class="modal-title">Tampilan Landingpage Lengkap</h3>
+                </div>
+                <button id="modal-close" class="modal-close" aria-label="Tutup preview">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Full preview" class="modal-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
